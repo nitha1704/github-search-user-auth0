@@ -15,18 +15,10 @@ function App() {
     <AuthWrapper>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/testauth0">
-            <TestAuth0 />
-          </Route>
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
-          <Route exact path="*">
-            <ErrorPage />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/testauth0" component={TestAuth0} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="*" component={ErrorPage} />
         </Switch>
       </BrowserRouter>
     </AuthWrapper>
