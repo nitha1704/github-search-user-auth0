@@ -18,8 +18,11 @@ const Home = () => {
   if (loading) {
     return (
       <>
-        <SearchBar />
-        <img src={loadingImage} alt="" className="img-loading" />
+        <NavbarAuth0 />
+        <div className="app">
+          <SearchBar />
+          <img src={loadingImage} alt="" className="img-loading" />
+        </div>
       </>
     );
   }
