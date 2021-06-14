@@ -20,7 +20,7 @@ const NavbarAuth0 = () => {
           </div>
           <span>Welcome, {user.name}</span>
           <div className="wrap-button">
-            <button onClick={() => logout()}>Logout</button>
+            <button onClick={() => logout({returnTo: window.location.origin})}>Logout</button>
           </div>
         </div>
       </Nav>
@@ -37,7 +37,11 @@ const NavbarAuth0 = () => {
             Welcome, {user.given_name} {user.family}
           </span>
           <div className="wrap-button">
-            <button onClick={() => logout()}>Logout</button>
+            <button
+              onClick={() => logout({ returnTo: window.location.origin })}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </Nav>
@@ -53,7 +57,11 @@ const NavbarAuth0 = () => {
             </div>
             <span>Welcome, {user.name}</span>
             <div className="wrap-button">
-              <button onClick={() => logout()}>Logout</button>
+              <button
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Logout
+              </button>
             </div>
           </div>
         </Nav>
